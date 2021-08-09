@@ -152,6 +152,7 @@ h3 {
 p {
   text-align: justify;
   margin-top: 1em;
+  margin-bottom: 0.2em;
   font-size: 1.2em;
 }
 
@@ -171,6 +172,7 @@ a:hover {
 
 figcaption {
   font-size: 1.1em;
+  margin-bottom: 0.2em;
 }
 
 #header {
@@ -189,6 +191,7 @@ figcaption {
   background: #ffd1dc;
   padding: 0.5em;
   margin-top: auto;
+  border-top: 24px solid rgba(255, 255, 255, 1);
 }
 
 video {
