@@ -175,7 +175,7 @@ figcaption {
   margin-bottom: 0.2em;
 }
 
-#header {
+header {
   position: relative;
   background: #ffd1dc;
   text-align: center;
@@ -187,7 +187,7 @@ figcaption {
   margin: 0 10vw;
 }
 
-#footer {
+footer {
   background: #ffd1dc;
   padding: 0.5em;
   margin-top: auto;
@@ -195,12 +195,16 @@ figcaption {
 }
 
 video {
-  width: 30vw;
+  width: 30%;
   margin-top: 1em;
 }
 
 .featured {
   max-width: 20em;
+  width: 40%;
+  display: inline-block;
+  margin: auto;
+  border-radius: 12px;
 }
 
 .home {
@@ -208,6 +212,16 @@ video {
   display: inline-block;
   margin: auto;
   margin-top: 1em;
+  margin-bottom: 0.5em;
+  border-radius: 12px;
+}
+
+.home:hover {
+  transform: scale(1.025);
+  -moz-transition: transform 0.25s ease-in-out;
+  -webkit-transition: transform 0.25s ease-in-out;
+  -ms-transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 
 .case-study {
