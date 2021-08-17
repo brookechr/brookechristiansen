@@ -171,7 +171,7 @@ a:hover {
 }
 
 figcaption {
-  font-size: 1.1em;
+  font-size: 0.8em;
   margin-bottom: 0.2em;
 }
 
@@ -200,19 +200,23 @@ video {
 }
 
 .featured {
-  max-width: 20em;
+  max-width: 5em;
   width: 40%;
   display: inline-block;
   margin: auto;
   border-radius: 12px;
 }
 
+.home-picture-list > li {
+  break-inside: avoid-column;
+  height: 9.5em;
+}
+
 .home {
-  width: 40%;
+  height: 7em;
+  max-width: 80vw;
   display: inline-block;
-  margin: auto;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin: 0.5em;
   border-radius: 12px;
 }
 
@@ -317,6 +321,9 @@ ul.icons li {
   tr {
     height: 25em;
   }
+  .home-picture-list {
+    columns: 3;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -334,6 +341,10 @@ ul.icons li {
 }
 
 @media screen and (max-width: 980px) {
+  .home-picture-list {
+    columns: 2;
+  }
+
   html,
   body {
     overflow-x: hidden;
@@ -383,5 +394,11 @@ ul.icons li {
 
   tr {
     height: 16em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-picture-list {
+    columns: 1;
   }
 }
