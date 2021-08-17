@@ -214,9 +214,8 @@ video {
 
 .home {
   height: 7em;
-  max-width: 80vw;
   display: inline-block;
-  margin: 0.5em;
+  margin: 0.5em auto;
   border-radius: 12px;
 }
 
