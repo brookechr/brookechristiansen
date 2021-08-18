@@ -200,8 +200,7 @@ video {
 }
 
 .featured {
-  max-width: 5em;
-  width: 40%;
+  width: 12em;
   display: inline-block;
   margin: auto;
   border-radius: 12px;
