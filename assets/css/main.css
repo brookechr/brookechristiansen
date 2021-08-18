@@ -171,8 +171,8 @@ a:hover {
 }
 
 figcaption {
-  font-size: 0.8em;
-  margin-bottom: 0.2em;
+  font-size: 1em;
+  margin: 0.2em 0;
 }
 
 header {
@@ -212,6 +212,10 @@ video {
   height: 9.5em;
 }
 
+.home-picture-list figcaption {
+  font-size: 0.8em;
+}
+
 .home {
   height: 7em;
   display: inline-block;
@@ -227,16 +231,22 @@ video {
   transition: transform 0.25s ease-in-out;
 }
 
-.case-study {
-  width: 50vw;
+.experience-page-picture {
+  max-width: 50vw;
   display: inline-block;
   margin-top: 1em;
 }
 
-.prototype {
+.table-picture {
   width: 30vw;
   display: inline-block;
   margin: 0 2vw;
+}
+
+.skill-list,
+.course-list {
+  font-size: 1.2em;
+  text-align: justify;
 }
 
 td {
