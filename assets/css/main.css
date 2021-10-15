@@ -48,7 +48,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -199,6 +198,11 @@ footer {
 video {
   width: 30%;
   margin-top: 1em;
+}
+
+iframe {
+  width: 70%;
+  max-width: 500px;
 }
 
 .featured {
@@ -378,6 +382,10 @@ ul.icons li {
 }
 
 @media screen and (max-width: 736px) {
+  h1 {
+    font-size: 1.7em;
+  }
+
   .image.left,
   .image.right {
     max-width: 35%;
