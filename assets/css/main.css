@@ -225,7 +225,7 @@ iframe {
   height: 7em;
   display: inline-block;
   margin: 0.5em auto;
-  border-radius: 12px;
+  border-radius: 4px;
 }
 
 .home:hover {
