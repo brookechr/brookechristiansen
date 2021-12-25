@@ -13,8 +13,6 @@ html,
 body,
 div,
 span,
-applet,
-object,
 h1,
 h2,
 h3,
@@ -69,22 +67,8 @@ main {
 }
 
 body {
-  line-height: 1;
+  line-height: 1.5;
   -webkit-text-size-adjust: none;
-}
-
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-input,
-select,
-textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
 }
 
 html {
@@ -110,13 +94,16 @@ body.is-preload *:after {
   transition: none !important;
 }
 
-body,
-input,
-textarea,
-select {
-  /* font-family: "Karla"; */
+h1,
+h2,
+h3,
+h4,
+p,
+figcaption,
+li {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  letter-spacing: 0.15ch;
   color: #204755;
 }
 
@@ -126,20 +113,15 @@ h3 {
   text-transform: uppercase;
 }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-  text-decoration: none;
-}
-
 h1 {
   text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.2ch;
   font-size: 3em;
   line-height: 1em;
+}
+
+h1 a {
+  text-decoration: none;
 }
 
 h2 {
@@ -149,34 +131,38 @@ h2 {
 
 h3 {
   font-size: 1.3em;
-  margin: 1.5em 0 0.5em 0;
+  margin: 1.25em 0 0.25em 0;
 }
 
 p {
   text-align: justify;
-  margin-top: 1em;
-  margin-bottom: 0.2em;
-  font-size: 1.2em;
-  line-height: 1.5em;
+  margin: 1em 0 0 0;
+}
+
+p,
+li {
+  font-size: 1.1em;
+  line-height: 1.5;
 }
 
 a {
+  color: #204755;
+}
+
+a:hover {
   -moz-transition: color 0.25s ease-in-out,
     border-bottom-color 0.25s ease-in-out;
   -webkit-transition: color 0.25s ease-in-out,
     border-bottom-color 0.25s ease-in-out;
   -ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-  color: #204755;
-}
-
-a:hover {
   color: rgba(40, 115, 143, 0.8);
 }
 
 figcaption {
   font-size: 1em;
-  margin: 0.2em 0;
+  margin: 0.5em 0;
+  line-height: 1.2;
 }
 
 header {
@@ -187,7 +173,8 @@ header {
   padding: 3em 0 2em 0;
 }
 
-#main {
+section,
+main {
   margin: 0 10vw;
 }
 
@@ -203,35 +190,20 @@ video {
   margin-top: 1em;
 }
 
-iframe {
-  width: 70%;
-  max-width: 500px;
-}
 
-/* .featured {
-  width: 12em;
-  display: inline-block;
-  margin: auto;
-  border-radius: 12px;
-} */
 
 .home-picture-list > li {
   break-inside: avoid-column;
-  height: 9.5em;
+  height: 14em;
 }
 
-.home-picture-list figcaption {
-  font-size: 0.8em;
-}
-
-.home {
-  height: 7em;
+.home-picture {
+  height: 10em;
   display: inline-block;
-  /* margin: 0.5em auto; */
   margin-bottom: -0.5em;
 }
 
-.home:hover {
+.home-picture:hover {
   transform: scale(1.025);
   -moz-transition: transform 0.25s ease-in-out;
   -webkit-transition: transform 0.25s ease-in-out;
@@ -245,6 +217,12 @@ iframe {
   margin-top: 1em;
 }
 
+iframe {
+  width: 70vw;
+  height: 50vh;
+}
+
+
 .table-picture {
   width: 30vw;
   display: inline-block;
@@ -253,7 +231,6 @@ iframe {
 
 .skill-list,
 .course-list {
-  font-size: 1.2em;
   text-align: justify;
 }
 
@@ -267,17 +244,6 @@ table {
 
 li {
   list-style: none;
-  margin: 0.5em 0;
-}
-
-li:first-child {
-  margin-top: 0;
-}
-
-ul {
-  list-style: disc;
-  font-size: 1.2em;
-  line-height: 1.5em;
 }
 
 ul.icons {
@@ -287,10 +253,8 @@ ul.icons {
 
 ul.icons li {
   display: inline-block;
-  font-size: 2em;
-  position: relative;
+  font-size: 2.5em;
   padding: 1em 0.5em 0 0.5em;
-  margin: 0;
 }
 
 .icon {
@@ -339,26 +303,23 @@ ul.icons li {
   tr {
     height: 25em;
   }
+
   .home-picture-list {
     columns: 3;
   }
 }
 
 @media screen and (max-width: 1280px) {
-  h2 br,
-  h3 br,
-  h4 br,
-  h5 br,
-  h6 br {
-    display: none;
-  }
-
   tr {
     height: 20em;
   }
 }
 
 @media screen and (max-width: 980px) {
+  tr {
+    height: 18em;
+  }
+
   .home-picture-list {
     columns: 2;
   }
@@ -379,39 +340,11 @@ ul.icons li {
     transition: transform 0.5s ease;
     padding-bottom: 1px;
   }
-
-  tr {
-    height: 18em;
-  }
 }
 
 @media screen and (max-width: 736px) {
   h1 {
-    font-size: 1.7em;
-  }
-
-  .image.left,
-  .image.right {
-    max-width: 35%;
-  }
-
-  ul.actions li {
-    display: block;
-    margin: 1em 0 0 0;
-  }
-
-  ul.actions li:first-child {
-    margin-top: 0;
-  }
-
-  #content > main,
-  #content > article {
-    margin: 3em 0 0 0;
-    padding: 3em 0 0 0;
-  }
-
-  .featured {
-    width: 80%;
+    font-size: 2em;
   }
 
   tr {
