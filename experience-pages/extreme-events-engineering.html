@@ -58,22 +58,28 @@
           <article>
             <h2 tabindex="1">Extreme Events Engineering VIP Project</h2>
 
-            <p>
+            <p tabindex="1">
               I am going into my third and final semester of being involved in
-              this Vertically Integrated Project (VIP) under Dr. Jorge Macedo.
+              the Extreme Events Engineering Vertically Integrated Project (VIP)
+              under Dr. Jorge Macedo.
             </p>
 
-            <p>
+            <p tabindex="1">
               During my first semester, I was tasked with updating/fixing a
-              legacy Python codebase for performing seismic catalog declustering
-              calculations on a dataset of earthquakes in South America using
-              the Zaliapin and Ben-Zion method that had gone untouched for the
-              past 5 years. I knew very little about earthquakes or the formulas
-              associated with classifying them, but was working with someone who
-              had geophysics experience (though not a software development
-              background). With all that said, it was challenging and sometimes
-              frustrating to work with. However, with a lot of patience and Googling, I was able to make it
-              work and add some new visualization functionality.
+              legacy Python codebase that had gone untouched for 5 years that
+              performed seismic catalog declustering calculations on a dataset
+              of earthquakes using the Zaliapin and Ben-Zion method. With help
+              from teammates (who were working on implementations of other
+              declustering algorithms), I ended up adding some data
+              visualizations shown below.
+            </p>
+
+            <p tabindex="1">
+              Declustering, or classifying independent and dependent events and
+              removing the dependent events from the catalog, may be useful for
+              isolating independent events during seismic hazard assessment,
+              development of clustered seismicity models, earthquake prediction
+              research, or seismicity rate change estimation.
             </p>
 
             <table>
@@ -82,35 +88,61 @@
                   <img
                     tabindex="1"
                     src="../images/declustering-before.webp"
-                    alt="A map of earthquakes in and around Peru before seismic catalog declustering was performed"
+                    alt="A map of earthquakes in South America before seismic catalog declustering was performed"
                     class="table-picture"
                   />
                   <figcaption>
-                    A screenshot from my first semester of a plot of all
-                    recorded earthquakes.
+                    A visualization from my Python implementation of all
+                    recorded earthquakes in the catalog we used.
                   </figcaption>
                 </td>
                 <td>
                   <img
                     tabindex="1"
                     src="../images/declustering-after.webp"
-                    alt="A map of earthquakes in and around Peru after seismic catalog declustering was performed (now with less earthquakes)"
+                    alt="A map of earthquakes in South America after seismic catalog declustering was performed (now with less earthquakes)"
                     class="table-picture"
                   />
                   <figcaption>
-                    A screenshot from my first semester of a plot of earthquakes
-                    after the non-mainshocks were removed.
+                    A visualization from my Python implementation of earthquakes
+                    after the dependent events were removed.
                   </figcaption>
                 </td>
               </tr>
             </table>
 
-            <p>
+            <p tabindex="1">
               During my second semester, I created a MATLAB implementation of
               the Zaliapin and Ben-Zion method with more complex visualizations
               and also started creating a MATLAB k-means declustering
-              implementation.
+              implementation. The clusters currently outputted by the k-means
+              implementation do not correspond to those that should be detected.
+              This may imply that the k-means method cannot detect the correct
+              clusters, thus it is important that we evaluate other
+              classification methods (i.e., Gaussian mixture models) in the
+              future.
             </p>
+
+            <img
+              tabindex="1"
+              src="../images/declustering.webp"
+              alt="Data visualizations from the MATLAB implementation of the Zaliapin and Ben-Zion method."
+              class="table-picture"
+            />
+            <figcaption>
+              Data visualizations from the MATLAB implementation of the Zaliapin
+              and Ben-Zion method. See only the independent events in the
+              'after' visualizations. The lefthand column presents the events in
+              time and space (measured with latitude), while the middle column
+              presents the events' nearest-neighbor distances as histograms and
+              the righthand column presents the events on a heatmap in the
+              Log(T) vs. Log(R) space. Note that between the before and after
+              visualizations, in the lefthand column, the density of events
+              generally decreases, in the middle column, the density of events
+              that have a low nearest-neighbor distance to each other decreases,
+              and in the righthand column of visualizations, the 2 clusters
+              representing dependent events have been removed.
+            </figcaption>
           </article>
         </div>
       </section>
