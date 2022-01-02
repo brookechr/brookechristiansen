@@ -20,17 +20,21 @@
   <body class="no-sidebar is-preload">
     <div id="page-wrapper">
       <!-- Header -->
-      <header id="header">
-        <h1 id="logo">
-          <a href="/index.html" tabindex="1">Brooke Christiansen</a>
-        </h1>
-        <ul class="icons">
+      <header class="desktop_header">
+        <ul>
+          <li>
+            <h1>
+              <a href="/index.html" tabindex="0" style="margin-left: 0"
+                >Brooke Christiansen</a
+              >
+            </h1>
+          </li>
           <li>
             <a
               href="https://www.linkedin.com/in/brooke-christiansen/"
               class="icon brands alt fa-linkedin"
               aria-label="Visit my LinkedIn page"
-              tabindex="1"
+              tabindex="0"
               ><span class="label">LinkedIn</span></a
             >
           </li>
@@ -39,7 +43,7 @@
               href="https://github.com/brookechr"
               class="icon brands alt fa-github"
               aria-label="Visit my GitHub page"
-              tabindex="1"
+              tabindex="0"
               ><span class="label">GitHub</span></a
             >
           </li>
@@ -48,7 +52,108 @@
               href="mailto:bchristiansen3@gatech.edu"
               class="icon solid alt fa-envelope"
               aria-label="Email me"
-              tabindex="1"
+              tabindex="0"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a tabindex="0" href="../index.html#about_me">About Me</a>
+          </li>
+          <li>
+            <a tabindex="0" href="../index.html#experiences_and_projects"
+              >Experiences and Projects</a
+            >
+            <div class="dropdown">
+              <button
+                class="dropdown_button"
+                aria-label="experience page links dropdown"
+                tabindex="0"
+              >
+                <i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown_content" tabindex="0">
+                <a href="viasat-internship.html" tabindex="0"
+                  >Viasat, Inc. Internship</a
+                >
+                <a href="cei-internship.html" tabindex="0"
+                  >Computer Enterprises, Inc. Internship</a
+                >
+                <a href="teaching-assistant.html"
+                  >College of Computing Teaching Assistant</a
+                >
+                <a href="cwaws.html"
+                  >Podcast's Software Development and Graphic Design</a
+                >
+                <a href="extreme-events-engineering.html"
+                  >Extreme Events Engineering VIP Project</a
+                >
+                <a href="braintrust.html"
+                  >Work on Climate Braintrust Slack Bot</a
+                >
+                <a href="conscious-swipes.html"
+                  >Conscious Swipes App</a
+                >
+                <a href="tedtx-talk.html">TEDx Talk</a>
+                <a
+                  href="https://pangolin.green/discover/impact/why-adopt-a-plant-based-diet/"
+                  >Plant-based Diet Guest Blog Post</a
+                >
+                <a href="sustainability-involvements.html"
+                  >Sustainability Involvements</a
+                >
+                <a href="completed-pluralsight-courses.html"
+                  >Completed PluralSight Courses</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <a tabindex="0" href="../index.html#skills">Skills</a>
+          </li>
+          <li>
+            <a tabindex="0" href="../index.html#relevant_coursework">Relevant Coursework</a>
+          </li>
+          <li>
+            <a tabindex="0" href="../index.html#honors">Honors</a>
+          </li>
+        </ul>
+      </header>
+
+      <header class="mobile_header">
+        <ul>
+          <li>
+            <h1>
+              <a href="/index.html" tabindex="0" style="margin-left: 0"
+                >Brooke Christiansen</a
+              >
+            </h1>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/brooke-christiansen/"
+              class="icon brands alt fa-linkedin"
+              aria-label="Visit my LinkedIn page"
+              tabindex="0"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/brookechr"
+              class="icon brands alt fa-github"
+              aria-label="Visit my GitHub page"
+              tabindex="0"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:bchristiansen3@gatech.edu"
+              class="icon solid alt fa-envelope"
+              aria-label="Email me"
+              tabindex="0"
               ><span class="label">Email</span></a
             >
           </li>
@@ -58,17 +163,17 @@
       <section>
         <div class="container">
           <article>
-            <h2 tabindex="1">
+            <h2 tabindex="0">
               Conversations with a Wannabe Scientist Software Development and
               Graphic Design
             </h2>
 
-            <p tabindex="1">
+            <p tabindex="0">
               From January to June of 2021, I contributed some software
               development and graphic design work for the podcast
               <a
                 href="https://www.conversationswithawannabescientist.com/p/the-podcast.html"
-                tabindex="1"
+                tabindex="0"
               >
                 Conversations with a Wannabe Scientist</a
               >
@@ -76,7 +181,7 @@
               functionality and customization to its Blogger
               <a
                 href="https://www.conversationswithawannabescientist.com/"
-                tabindex="1"
+                tabindex="0"
                 >website</a
               >, which led to increase in site views of over 210% from January
               2021 to August 2021. I also used Figma to create the podcast cover
@@ -84,7 +189,7 @@
             </p>
 
             <img
-              tabindex="1"
+              tabindex="0"
               src="../images/cwaws.webp"
               alt="The Conversations with a Wannabe Scientist logo I created (a test tube as the microphone on a microphone stand)"
               class="experience-page-picture"
@@ -95,12 +200,17 @@
       </section>
 
       <footer>
-        <h4 tabindex="1">
+        <h4 tabindex="0">
           Courtesy of Brooke Christiansen, 2022.
+          <br />
           <i
-            >This website is hosted Green - checked by
+            >This website is hosted green as tested by
             <a href="https://www.thegreenwebfoundation.org/"
               ><u>thegreenwebfoundation.org</u></a
+            >
+            and cleaner than 58% of web pages as tested by
+            <a href="https://www.websitecarbon.com/website/brookechr-com/"
+              >websitecarbon.com</a
             >.</i
           >
         </h4>

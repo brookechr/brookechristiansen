@@ -73,6 +73,7 @@ body {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -92,6 +93,10 @@ body.is-preload *:after {
   -webkit-transition: none !important;
   -ms-transition: none !important;
   transition: none !important;
+}
+
+b {
+  font-weight: bold !important;
 }
 
 h1,
@@ -116,8 +121,6 @@ h3 {
 h1 {
   text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
   letter-spacing: 0.2ch;
-  font-size: 3em;
-  line-height: 1em;
 }
 
 h1 a {
@@ -125,12 +128,12 @@ h1 a {
 }
 
 h2 {
-  font-size: 1.6em;
+  font-size: 1.2em;
   margin: 1.5em 0 0.5em 0;
 }
 
 h3 {
-  font-size: 1.3em;
+  font-size: 1.1em;
   margin: 1.25em 0 0.25em 0;
 }
 
@@ -141,7 +144,7 @@ p {
 
 p,
 li {
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.5;
 }
 
@@ -156,7 +159,7 @@ a:hover {
     border-bottom-color 0.25s ease-in-out;
   -ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-  color: rgba(40, 115, 143, 0.8);
+  color: #627e88;
 }
 
 figcaption {
@@ -166,11 +169,109 @@ figcaption {
 }
 
 header {
-  position: relative;
   background: #ffd1dc;
-  text-align: center;
-  margin-bottom: 1em;
-  padding: 3em 0 2em 0;
+  top: 0;
+  padding: 1em 10vw;
+  height: 4em;
+  position: sticky;
+
+  justify-content: space-between;
+  z-index: 10;
+}
+
+header ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header ul li a {
+  text-decoration: none;
+  margin-left: 1em;
+}
+
+.icon {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  font-size: 1.2em;
+  margin-left: 0.5em;
+}
+
+.icon:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  text-transform: none !important;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  line-height: inherit;
+}
+
+.icon > .label {
+  display: none;
+}
+
+.icon.solid:before {
+  font-weight: 900;
+}
+
+.icon.brands:before {
+  font-family: "Font Awesome 5 Brands";
+}
+
+#about_me,
+#experiences_and_projects,
+#skills,
+#relevant_coursework,
+#honors {
+  scroll-margin-top: 4em;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+}
+
+.dropdown_button {
+  color: #204755;
+  background-color: #ffd1dc;
+  font-size: 1em;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 30em;
+  z-index: 1;
+  text-align: left;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown_content a {
+  padding: 0.5em;
+  display: block;
+  margin-left: 0;
+}
+
+.dropdown_content a:hover {
+  background-color: #ffe3ea;
+  color: #204755;
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+
+.dropdown:hover .dropdown_button {
+  color: #627e88;
+  background-color: #ffd1dc;
 }
 
 section,
@@ -182,12 +283,12 @@ footer {
   background: #ffd1dc;
   padding: 0.5em;
   margin-top: auto;
-  border-top: 24px solid rgba(255, 255, 255, 1);
+  border-top: 24px solid white;
 }
 
-video {
-  width: 30%;
-  margin-top: 1em;
+.skill-list,
+.course-list {
+  text-align: justify;
 }
 
 .home-picture-list > li {
@@ -215,6 +316,11 @@ video {
   margin-top: 1em;
 }
 
+video {
+  width: 30%;
+  margin-top: 1em;
+}
+
 iframe {
   width: 70vw;
   height: 50vh;
@@ -224,11 +330,6 @@ iframe {
   width: 30vw;
   display: inline-block;
   margin: 0 2vw;
-}
-
-.skill-list,
-.course-list {
-  text-align: justify;
 }
 
 td {
@@ -243,49 +344,6 @@ li {
   list-style: none;
 }
 
-ul.icons {
-  list-style: none;
-  text-align: center;
-}
-
-ul.icons li {
-  display: inline-block;
-  font-size: 2.5em;
-  padding: 1em 0.5em 0 0.5em;
-}
-
-.icon {
-  text-decoration: none;
-  position: relative;
-  text-decoration: none;
-}
-
-.icon:before {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  line-height: inherit;
-}
-
-.icon > .label {
-  display: none;
-}
-
-.icon.solid:before {
-  font-weight: 900;
-}
-
-.icon.brands:before {
-  font-family: "Font Awesome 5 Brands";
-}
-
 #page-wrapper {
   min-height: 100vh;
   display: flex;
@@ -296,61 +354,88 @@ ul.icons li {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 1680px) {
+@media screen and (min-width: 1401px) {
   tr {
-    height: 25em;
+    height: 24em;
   }
-
+  .desktop_header {
+    display: flex;
+  }
+  .mobile_header {
+    display: none;
+  }
+  h1,
+  header ul li {
+    font-size: 1.2em;
+  }
+  header {
+    padding: 1em 5vw;
+  }
   .home-picture-list {
     columns: 3;
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1201px) and (max-width: 1400px){
   tr {
     height: 20em;
   }
+  .desktop_header {
+    display: flex;
+  }
+  .mobile_header {
+    display: none;
+  }
+  h1,
+  header ul li {
+    font-size: 1em;
+  }
+  header {
+    padding: 1em 5vw;
+  }
+  .home-picture-list {
+    columns: 3;
+  }
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (min-width: 901px) and (max-width: 1200px) {
   tr {
     height: 18em;
   }
-
+  .desktop_header {
+    display: flex;
+  }
+  .mobile_header {
+    display: none;
+  }
+  h1,
+  header ul li {
+    font-size: 0.8em;
+  }
+  header {
+    padding: 1em 5vw;
+  }
   .home-picture-list {
     columns: 2;
   }
-
-  html,
-  body {
-    overflow-x: hidden;
-  }
-
-  #page-wrapper {
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-transition: -moz-transform 0.5s ease;
-    -webkit-transition: -webkit-transform 0.5s ease;
-    -ms-transition: -ms-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    padding-bottom: 1px;
-  }
 }
 
-@media screen and (max-width: 736px) {
-  h1 {
-    font-size: 2em;
+@media screen and (max-width: 900px) {
+  .home-picture-list {
+    columns: 1;
   }
-
   tr {
     height: 16em;
   }
-}
-
-@media screen and (max-width: 600px) {
-  .home-picture-list {
-    columns: 1;
+  .mobile_header {
+    display: block;
+    padding: 1em 2vw;
+  }
+  .desktop_header {
+    display: none;
+  }
+  h1,
+  header ul li {
+    font-size: 0.9em;
   }
 }
