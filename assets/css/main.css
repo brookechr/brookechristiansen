@@ -225,7 +225,11 @@ header ul li a {
 #experiences_and_projects,
 #skills,
 #relevant_coursework,
-#honors {
+#honors,
+#veggie-jackets,
+#the-humane-league,
+#work-on-climate
+{
   scroll-margin-top: 4em;
   -webkit-background-clip: content-box;
   background-clip: content-box;
