@@ -1,2 +1,2 @@
-# brookechr.github.io
+# brookechr.com
 Personal Site

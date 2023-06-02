@@ -102,6 +102,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 figcaption,
 li {
@@ -113,7 +114,8 @@ li {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   text-transform: uppercase;
 }
 
@@ -134,6 +136,11 @@ h2 {
 h3 {
   font-size: 1.1em;
   margin: 1.25em 0 0.25em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1em 0 0.25em 0;
 }
 
 p {
@@ -228,8 +235,7 @@ header ul li a {
 #honors,
 #veggie-jackets,
 #the-humane-league,
-#work-on-climate
-{
+#work-on-climate {
   scroll-margin-top: 4em;
   -webkit-background-clip: content-box;
   background-clip: content-box;
@@ -268,13 +274,15 @@ header ul li a {
   color: #204755;
 }
 
-.dropdown:hover .dropdown_content {
+.dropdown:hover .dropdown_content,
+.dropdown_button:focus-visible ~ .dropdown_content {
   display: block;
 }
 
-.dropdown:hover .dropdown_button {
+.dropdown:hover .dropdown_button,
+.dropdown_button:focus ~ .dropdown_button {
   color: #627e88;
-  background-color: #ffd1dc;
+  /* background-color: #ffd1dc; */
 }
 
 section,
@@ -378,7 +386,7 @@ li {
   }
 }
 
-@media screen and (min-width: 1201px) and (max-width: 1400px){
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
   tr {
     height: 20em;
   }
