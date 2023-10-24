@@ -287,7 +287,7 @@ header ul li a {
 
 section,
 main {
-  margin: 0 10vw;
+  margin: 0 20vw;
 }
 
 footer {
@@ -352,6 +352,7 @@ table {
 
 li {
   list-style: none;
+  text-align: justify;
 }
 
 #page-wrapper {
