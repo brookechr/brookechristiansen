@@ -282,12 +282,20 @@ header ul li a {
 .dropdown:hover .dropdown_button,
 .dropdown_button:focus ~ .dropdown_button {
   color: #627e88;
-  /* background-color: #ffd1dc; */
 }
 
-section,
-main {
-  margin: 0 20vw;
+@media screen and (min-width: 901px) {
+  section,
+  main {
+    margin: 0 20vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section,
+  main {
+    margin: 0 10vw;
+  }
 }
 
 footer {
@@ -447,6 +455,13 @@ li {
   }
   h1,
   header ul li {
-    font-size: 0.9em;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  h1,
+  header ul li {
+    font-size: 0.85em;
   }
 }
